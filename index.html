@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dijkstra's Mile | Route Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Left Sidebar: Controls and Info -->
+      <aside class="sidebar">
+        <header>
+          <h1>Dijkstra's <span class="accent">Mile</span></h1>
+          <p class="subtitle">Route Planner Engine</p>
+        </header>
+
+        <section class="control-group">
+          <h3>Target Distance</h3>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="targetDistance"
+              placeholder="e.g., 500"
+              value="500"
+            />
+            <span>meters</span>
+          </div>
+        </section>
+
+        <section class="instructions">
+          <h3>Modes</h3>
+          <p class="mode-text">
+            <strong>Mode 1:</strong> Click Start <strong>(Green)</strong> to End
+            <strong>(Red)</strong>
+          </p>
+          <p class="mode-text">
+            <strong>Mode 2:</strong> Set distance & click Loop
+          </p>
+        </section>
+
+        <section class="actions">
+          <button id="loopButton" class="btn btn-primary">
+            Find Circular Loop
+          </button>
+        </section>
+
+        <div id="output" class="status-box">Initializing...</div>
+      </aside>
+
+      <!-- Right Main Area: The Map Stage -->
+      <main class="map-container">
+        <canvas id="graphCanvas" width="800" height="600"></canvas>
+      </main>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
