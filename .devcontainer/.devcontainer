@@ -1,0 +1,12 @@
+{
+  "name": "dijkstra",
+  "forwardPorts": [
+    5500
+  ],
+  "portsAttributes": {
+    "5500": {
+      "label": "Dijkstra's Algorithm",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
